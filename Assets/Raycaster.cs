@@ -3,16 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Raycaster : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+{    
+    public float interactionDistance = 3f;
+    public bool imnear;
 
-    // Update is called once per frame
     void Update()
     {
+        RaycastHit hit;
+
+        Debug.DrawRay(transform.position, transform.forward * interactionDistance);
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (Physics.Raycast(transform.position, transform.forward, out hit, interactionDistance))
+            {
+                if (hit.collider.tag == "Interactable")
+                {
+                    Debug.Log(hit.collider.name);
+                }
+                
+            }
         
+        }         
     }
 }
