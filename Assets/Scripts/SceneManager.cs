@@ -66,6 +66,10 @@ public class SceneManager : MonoBehaviour
         Teller.SetActive(true);
         playRecord = true;
         GameObject[] Dancers = GameObject.FindGameObjectsWithTag("Dancers");
+        foreach (GameObject dancer in Dancers)
+        {
+            dancer.GetComponentInChildren<Dancers>().GoDancing();
+        }
     }
     void Update()
     {

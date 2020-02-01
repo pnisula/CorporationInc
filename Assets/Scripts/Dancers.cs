@@ -8,28 +8,37 @@ public class Dancers : MonoBehaviour
     public Transform DancingLocation;    
     bool pathSelected = false;
     UnityEngine.AI.NavMeshAgent agent;
-    
+    bool shouldMove = false;
     // Start is called before the first frame update
-    void GoDancing()
+    public void GoDancing()
     {
-        danceAnimator = GetComponent<Animator>();
+        Debug.Log("Go Dancing");
+        danceAnimator = GetComponentInChildren<Animator>();
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-        agent.destination = DancingLocation.position;
+        agent.destination = DancingLocation.position;        
+        shouldMove = true;
+        danceAnimator.SetFloat("Speed", 1f);
     }
     void Dance()
     {
-        danceAnimator.SetBool("Dance", true);
+        danceAnimator.SetFloat("Speed", 0f);
+        danceAnimator.SetBool("TimeToDance", true);
     }
     // Update is called once per frame
     void Update()
-    {
-        if (!agent.pathPending)
-        {
+    {        
+        if (shouldMove && agent != null && !agent.pathPending)
+        {            
             if (agent.remainingDistance <= agent.stoppingDistance)
             {
                 if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
                 {
-                    Dance();           
+                    if (agent.velocity.sqrMagnitude < 3f)
+                    {
+                        danceAnimator.SetFloat("Speed", agent.velocity.sqrMagnitude);
+                        shouldMove = false;
+                        Dance();
+                    }
                 }
             }
         }
