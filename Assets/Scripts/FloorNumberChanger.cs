@@ -9,14 +9,14 @@ public class FloorNumberChanger : MonoBehaviour
     public TextMeshProUGUI floorNumberText;
     public GameObject doorLeft;
     public GameObject doorRight;
-
+    public int maxNumberOfFloors = 5;
     float time = 0.0f;
     int floorNumber = 0;
     bool doorsOpen;
     // Update is called once per frame
     void Update()
     {
-        if ((int)time < 12)
+        if ((int)time < maxNumberOfFloors)
         { 
             time += Time.deltaTime;
             Mathf.Clamp(time, 0.0f, 12.0f);
@@ -25,7 +25,7 @@ public class FloorNumberChanger : MonoBehaviour
             floorNumberText.text = floorNumber.ToString();
             handAnimator.SetBool("HandInFront", true);
         }
-        if(!doorsOpen && floorNumber==12)
+        if(!doorsOpen && floorNumber == maxNumberOfFloors)
         {
             doorsOpen = true;
             handAnimator.SetBool("HandInFront", false);
