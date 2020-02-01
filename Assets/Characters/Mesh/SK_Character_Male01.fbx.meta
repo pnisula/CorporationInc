@@ -2,94 +2,10 @@ fileFormatVersion: 2
 guid: 92bb9ea7dd82cd1429c3a9a8faf80780
 ModelImporter:
   serializedVersion: 19300
-  internalIDToNameTable:
-  - first:
-      74: 3526934975638039376
-    second: Armature.026|Armature.001|mixamo.com|Layer0
-  - first:
-      74: 1663477132666537705
-    second: Armature.026|Armature.002|mixamo.com|Layer0
-  - first:
-      74: 2922144691948561691
-    second: Armature.026|Armature.003|mixamo.com|Layer0
-  - first:
-      74: 6635908131249595813
-    second: Armature.026|Armature.004|mixamo.com|Layer0
-  - first:
-      74: 191947404205192793
-    second: Armature.026|Armature.005|mixamo.com|Layer0
-  - first:
-      74: 2004229780639300741
-    second: Armature.026|Armature.006|mixamo.com|Layer0
-  - first:
-      74: -8791781155665899167
-    second: Armature.026|Armature.007|mixamo.com|Layer0
-  - first:
-      74: -1581239044049176584
-    second: Armature.026|Armature.008|mixamo.com|Layer0
-  - first:
-      74: -4034743502628253505
-    second: Armature.026|Armature.009|mixamo.com|Layer0
-  - first:
-      74: -9203702119867826661
-    second: Armature.026|Armature.010|mixamo.com|Layer0
-  - first:
-      74: -5158371777425919092
-    second: Armature.026|Armature.011|mixamo.com|Layer0
-  - first:
-      74: -6235395926635489378
-    second: Armature.026|Armature.012|mixamo.com|Layer0
-  - first:
-      74: 501035798653712397
-    second: Armature.026|Armature.013|mixamo.com|Layer0
-  - first:
-      74: 940868146762767584
-    second: Armature.026|Armature.014|mixamo.com|Layer0
-  - first:
-      74: 832786792321942721
-    second: Armature.026|Armature.015|mixamo.com|Layer0
-  - first:
-      74: 8995766361044405275
-    second: Armature.026|Armature.016|mixamo.com|Layer0
-  - first:
-      74: 8765963201689935876
-    second: Armature.026|Armature.017|mixamo.com|Layer0
-  - first:
-      74: 1795295386216659825
-    second: Armature.026|Armature.018|mixamo.com|Layer0
-  - first:
-      74: 2562017446301621403
-    second: Armature.026|Armature.019|mixamo.com|Layer0
-  - first:
-      74: -1881274177614812851
-    second: Armature.026|Armature.020|mixamo.com|Layer0
-  - first:
-      74: 3991727869794619101
-    second: Armature.026|Armature.021|mixamo.com|Layer0
-  - first:
-      74: 3612954572410831298
-    second: Armature.026|Armature.022|mixamo.com|Layer0
-  - first:
-      74: 6527580773052301899
-    second: Armature.026|Armature.023|mixamo.com|Layer0
-  - first:
-      74: 3985171283675821929
-    second: Armature.026|Armature.024|mixamo.com|Layer0
-  - first:
-      74: 1619403869852001967
-    second: Armature.026|Armature.025|mixamo.com|Layer0
-  - first:
-      74: 5112856331700415361
-    second: Armature.026|Armature.026|mixamo.com|Layer0
-  - first:
-      74: 5188215629439483313
-    second: Armature.026|Male01_AnnoyedHeadShake
-  - first:
-      74: -41047072190185469
-    second: Armature.026|Male01_AnnoyedHeadShake.002
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
-    materialImportMode: 1
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -123,10 +39,10 @@ ModelImporter:
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
-    importVisibility: 1
+    importVisibility: 0
     importBlendShapes: 1
     importCameras: 0
-    importLights: 0
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -152,7 +68,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 3
   referencedClips: []
-  importAnimation: 1
+  importAnimation: 0
   humanDescription:
     serializedVersion: 3
     human: []
