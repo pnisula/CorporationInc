@@ -65,6 +65,7 @@ public class SceneManager : MonoBehaviour
         DJCamera.SetActive(true);
         Teller.SetActive(true);
         playRecord = true;
+        GameObject[] Dancers = GameObject.FindGameObjectsWithTag("Dancers");
     }
     void Update()
     {
