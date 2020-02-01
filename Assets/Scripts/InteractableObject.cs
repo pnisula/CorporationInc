@@ -7,6 +7,12 @@ public class InteractableObject : MonoBehaviour
     enum ActionFunctions { TestPrintHelloThere, TestPrintABCDEFGH}
 
     [SerializeField]
+    private bool canTalk = true;
+
+    [SerializeField]
+    private GameObject spawnObject;
+
+    [SerializeField]
     private string dialogText;
 
     [SerializeField]
@@ -19,7 +25,7 @@ public class InteractableObject : MonoBehaviour
     private string thirdChoiceText;
 
     [SerializeField]
-    private bool canInteractWithItem;
+    private string itemNeededToProgress;
 
     [SerializeField]
     private ActionFunctions action1Function;
@@ -34,20 +40,34 @@ public class InteractableObject : MonoBehaviour
     {
         if (interactedWithItem)
         {
-            if (canInteractWithItem)
+            if (interactedWithItem.name == itemNeededToProgress)
             {
                 Debug.Log("Interact object: " + this.name + " with item: " + interactedWithItem.gameObject.name);
+                if (canTalk)
+                    InteractionPanelScript.Instance.ShowInteraction(this, "Thank you for the " + interactedWithItem.name + ".", "Ok.", "", "");
+                Spawn(interactedWithItem.position);
+
+                Destroy(interactedWithItem.gameObject);
             }
             else
             {
-                InteractionPanelScript.Instance.ShowInteraction(this, "I don't need your " + interactedWithItem.name + ". Leave me alone.", "Ok.", "", "");
+                if (canTalk)
+                    InteractionPanelScript.Instance.ShowInteraction(this, "I don't need your " + interactedWithItem.name + ". Leave me alone.", "Ok.", "", "");
             }
         }
         else
         {
             Debug.Log("Interact object: " + this.name);
-            InteractionPanelScript.Instance.ShowInteraction(this, dialogText, firstChoiceText, secondChoiceText, thirdChoiceText);
+
+            if (canTalk)
+                InteractionPanelScript.Instance.ShowInteraction(this, dialogText, firstChoiceText, secondChoiceText, thirdChoiceText);
         }
+    }
+
+    void Spawn(Vector3 pos)
+    {
+        var x = Instantiate(spawnObject, pos, Quaternion.identity);
+        x.name = x.name.Replace("(Clone)", "");
     }
 
     public void SetChoice(int choiceChosen)
