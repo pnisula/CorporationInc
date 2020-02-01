@@ -36,7 +36,7 @@ public class InteractionPanelScript : MonoBehaviour
         Cursor.visible = false;
     }
 
-    public void ShowInteraction(string dialogText, string responseText = "OK")
+    public void ShowInteraction(string dialogText, string responseText)
     {
         dialogTextBox.SetText(dialogText);
         action1TextBox.text = responseText;
