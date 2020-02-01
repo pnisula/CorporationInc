@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
-    public enum Responses { Nothing, SpawnObject, GiveMarketingSignature, GiveAccountingSignature, GiveLegalSignature}
+    public enum Responses { Nothing, SpawnObject, GiveMarketingSignature, GiveAccountingSignature, GiveLegalSignature, PlayVinyl}
 
     public List<PhaseData> nextPhases = new List<PhaseData>();
 
@@ -60,6 +60,9 @@ public class InteractableObject : MonoBehaviour
                         break;
                     case Responses.GiveLegalSignature:
                         SceneManager.Instance.SetLegalGoalDone();
+                        break;
+                    case Responses.PlayVinyl:
+                        SceneManager.Instance.PlayVinyl();
                         break;
                 }
 

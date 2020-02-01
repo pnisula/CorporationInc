@@ -24,7 +24,9 @@ public class SceneManager : MonoBehaviour
     public bool legalGoalDone = false;
     public bool accountingGoalDone = false;
     public GameObject GameWon;
-
+    public GameObject Player;
+    public GameObject DJCamera;
+    public GameObject Teller;    
 
     public void SetMarketingGoalDone()
     {
@@ -51,5 +53,14 @@ public class SceneManager : MonoBehaviour
         {
             GameWon.SetActive(true);
         }
+    }
+
+    public void PlayVinyl()
+    {
+        Debug.Log("Play Vinyl");
+
+        Player.SetActive(false);
+        DJCamera.SetActive(true);
+        Teller.SetActive(true);
     }
 }
