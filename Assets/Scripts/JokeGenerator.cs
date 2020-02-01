@@ -8,12 +8,17 @@ public class JokeGenerator : MonoBehaviour
     public JokesScriptableObject jokes;
     public TextMeshProUGUI jokesText;
     public GameObject jokeCanvas;
-    public bool NotSoFunnyAnymore = true;
-
+    public bool NotSoFunnyAnymore = true;    
     bool tellJoke = true;
     bool tellPunchLine = false;
     int jokeIndex = 0;
+    private AudioSource jokeSounds;
     
+
+    void Start()
+    {
+        jokeSounds = GetComponent<AudioSource>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -55,6 +60,8 @@ public class JokeGenerator : MonoBehaviour
         
         Debug.Log("Tell Punch Line: "+jokeIndex);        
         jokeCanvas.SetActive(false);
+
+        jokeSounds.Play();        
 
         yield return new WaitForSeconds(1);
 
