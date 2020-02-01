@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -196,6 +196,136 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5162201071855694558}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &322362867
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 322362868}
+  - component: {fileID: 322362872}
+  - component: {fileID: 322362871}
+  - component: {fileID: 322362870}
+  - component: {fileID: 322362869}
+  m_Layer: 0
+  m_Name: InteractableObject (1)
+  m_TagString: Interactable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &322362868
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322362867}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.44, y: 1.4611487, z: -8.66}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 634565803}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &322362869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322362867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88b2a551a066e164c96471da7f6cc46e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogText: Who are you? Doesn't matter. Just get me some wine.
+  firstChoiceText: How about some water? [-15%fun]
+  secondChoiceText: Fuck off!
+  thirdChoiceText: I'm the guy who made this deal possible. The thing we're celebratig,
+    remember?
+  canInteractWithItem: 0
+--- !u!65 &322362870
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322362867}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &322362871
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322362867}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 990f5064bd92ba543952655326931c47, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &322362872
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322362867}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &634565803 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4465953320485751777, guid: 2eb977df460720043bbf3c1a42a71447,
+    type: 3}
+  m_PrefabInstance: {fileID: 5162201071855694558}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &657582666 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8534717591039165862, guid: 68a5579c8cb9d2c42bad59e9fb7c7b67,
+    type: 3}
+  m_PrefabInstance: {fileID: 8534717592278883452}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,7 +532,7 @@ PrefabInstance:
     - target: {fileID: 1362306388, guid: e07bc37a9ca1ed6439a5222db52280c4, type: 3}
       propertyPath: controller
       value: 
-      objectReference: {fileID: 124781095}
+      objectReference: {fileID: 657582666}
     - target: {fileID: 543330306422101774, guid: e07bc37a9ca1ed6439a5222db52280c4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -656,16 +786,56 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 98690e9e4c52a284ab16c0f6e2b5d9b6, type: 2}
+    - target: {fileID: 5162201072213161620, guid: 2eb977df460720043bbf3c1a42a71447,
+        type: 3}
+      propertyPath: dialogText
+      value: What are you up to, boring guy who nobody knows?
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162201072213161620, guid: 2eb977df460720043bbf3c1a42a71447,
+        type: 3}
+      propertyPath: firstChoiceText
+      value: Let's have a drink!
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162201072213161620, guid: 2eb977df460720043bbf3c1a42a71447,
+        type: 3}
+      propertyPath: secondChoiceText
+      value: Fuck off! [Requires 50% fun]
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162201072213161620, guid: 2eb977df460720043bbf3c1a42a71447,
+        type: 3}
+      propertyPath: thirdChoiceText
+      value: Not much, leave me alone [-25% fun]
+      objectReference: {fileID: 0}
     - target: {fileID: 5162201072213161625, guid: 2eb977df460720043bbf3c1a42a71447,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 990f5064bd92ba543952655326931c47, type: 2}
+    - target: {fileID: 5162201072621699497, guid: 2eb977df460720043bbf3c1a42a71447,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162201072621699497, guid: 2eb977df460720043bbf3c1a42a71447,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5162201072621699497, guid: 2eb977df460720043bbf3c1a42a71447,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 5162201072621699499, guid: 2eb977df460720043bbf3c1a42a71447,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 3907edb2841b9b54f85f7133cf9e6fa3, type: 2}
+    - target: {fileID: 5162201072621699500, guid: 2eb977df460720043bbf3c1a42a71447,
+        type: 3}
+      propertyPath: m_Name
+      value: RedPickableCube
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2eb977df460720043bbf3c1a42a71447, type: 3}
 --- !u!1001 &8534717592278883452
@@ -675,10 +845,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 85323706, guid: 68a5579c8cb9d2c42bad59e9fb7c7b67, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 328506349, guid: 68a5579c8cb9d2c42bad59e9fb7c7b67, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 764530435, guid: 68a5579c8cb9d2c42bad59e9fb7c7b67, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884155244, guid: 68a5579c8cb9d2c42bad59e9fb7c7b67, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8534717591039165862, guid: 68a5579c8cb9d2c42bad59e9fb7c7b67,
         type: 3}
       propertyPath: m_JumpSpeed
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8534717591039165862, guid: 68a5579c8cb9d2c42bad59e9fb7c7b67,
+        type: 3}
+      propertyPath: m_MouseLook.lockCursor
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8534717591039165862, guid: 68a5579c8cb9d2c42bad59e9fb7c7b67,
+        type: 3}
+      propertyPath: m_IsWalking
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8534717591044828260, guid: 68a5579c8cb9d2c42bad59e9fb7c7b67,
         type: 3}
@@ -694,16 +890,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.033
-      objectReference: {fileID: 0}
-    - target: {fileID: 8534717591039165862, guid: 68a5579c8cb9d2c42bad59e9fb7c7b67,
-        type: 3}
-      propertyPath: m_MouseLook.lockCursor
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8534717591039165862, guid: 68a5579c8cb9d2c42bad59e9fb7c7b67,
-        type: 3}
-      propertyPath: m_IsWalking
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8534717591044828262, guid: 68a5579c8cb9d2c42bad59e9fb7c7b67,
         type: 3}
@@ -760,10 +946,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8534717591045189700, guid: 68a5579c8cb9d2c42bad59e9fb7c7b67,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8534717591045189702, guid: 68a5579c8cb9d2c42bad59e9fb7c7b67,
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8534717591045189702, guid: 68a5579c8cb9d2c42bad59e9fb7c7b67,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68a5579c8cb9d2c42bad59e9fb7c7b67, type: 3}

@@ -27,9 +27,12 @@ public class PickableObject : MonoBehaviour
     }
     public void Drop()
     {
+        Vector3 forward = transform.parent.forward;
+
         Debug.Log("Release object: " + this.GetComponent<Collider>().name);
         this.transform.parent = sceneTransform;
         this.GetComponent<Collider>().enabled = true;
         GetComponent<Rigidbody>().isKinematic = false;
+        GetComponent<Rigidbody>().velocity = forward * 5;
     }
 }

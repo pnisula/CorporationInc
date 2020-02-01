@@ -15,16 +15,17 @@ public class Raycaster : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (Physics.Raycast(transform.position, transform.forward, out hit, interactionDistance))
+            if (Physics.Raycast(transform.position, transform.forward, out hit, interactionDistance, ~(1 << 8)))
             {
-                if (hit.collider.tag == "Interactable")
+                print("Raycast hit: " + hit.collider.gameObject.name);
+                if (hit.collider.CompareTag("Interactable"))
                 {
                     Debug.Log("Interactable Object clicked");
                     if (hit.transform.gameObject.GetComponent<InteractableObject>() != null)
                         hit.transform.gameObject.GetComponent<InteractableObject>().Interact(holdingItem);
 
                 }
-                else if (hit.collider.tag == "Pickable")
+                else if (hit.collider.CompareTag("Pickable"))
                 {
                     Debug.Log("Pickable Object clicked");
                     if (hit.transform.gameObject.GetComponent<PickableObject>() != null)

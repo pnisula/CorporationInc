@@ -42,8 +42,26 @@ public class InteractionPanelScript : MonoBehaviour
     {
         dialogTextBox.SetText(dialogText);
         action1TextBox.text = action1Text;
-        action2TextBox.text = action2Text;
-        action3TextBox.text = action3Text;
+
+        if (action2Text != "")
+        {
+            action2Button.gameObject.SetActive(true);
+            action2TextBox.text = action2Text;
+        }
+        else
+        {
+            action2Button.gameObject.SetActive(false);
+        }
+
+        if (action3Text != "")
+        {
+            action3Button.gameObject.SetActive(true);
+            action3TextBox.text = action3Text;
+        }
+        else
+        {
+            action3Button.gameObject.SetActive(false);
+        }
 
         interactableObjectSendingTheDialog = dialogSender;
 
