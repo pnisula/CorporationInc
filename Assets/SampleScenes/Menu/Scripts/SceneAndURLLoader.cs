@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneAndURLLoader : MonoBehaviour
 {
+    /*
     private PauseMenu m_PauseMenu;
 
 
@@ -25,5 +26,6 @@ public class SceneAndURLLoader : MonoBehaviour
 	{
 		Application.OpenURL(url);
 	}
+    */
 }
 
