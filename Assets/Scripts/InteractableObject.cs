@@ -4,81 +4,55 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
-    enum ActionFunctions { TestPrintHelloThere, TestPrintABCDEFGH}
+    [SerializeField]
+    private bool canTalk = true;
+
+    [SerializeField]
+    private GameObject spawnObject;
 
     [SerializeField]
     private string dialogText;
 
     [SerializeField]
-    private string firstChoiceText;
+    private string responseText;
 
     [SerializeField]
-    private string secondChoiceText;
-
-    [SerializeField]
-    private string thirdChoiceText;
-
-    [SerializeField]
-    private bool canInteractWithItem;
-
-    [SerializeField]
-    private ActionFunctions action1Function;
-
-    [SerializeField]
-    private ActionFunctions action2Function;
-
-    [SerializeField]
-    private ActionFunctions action3Function;
+    private string itemNeededToProgress;
 
     public void Interact(Transform interactedWithItem)
     {
         if (interactedWithItem)
         {
-            if (canInteractWithItem)
+            if (interactedWithItem.name == itemNeededToProgress)
             {
                 Debug.Log("Interact object: " + this.name + " with item: " + interactedWithItem.gameObject.name);
+                if (canTalk)
+                    InteractionPanelScript.Instance.ShowInteraction("Thank you for the " + interactedWithItem.name + ".", "Continue");
+                Spawn(interactedWithItem.position);
+
+                Destroy(interactedWithItem.gameObject);
             }
             else
             {
-                InteractionPanelScript.Instance.ShowInteraction(this, "I don't need your " + interactedWithItem.name + ". Leave me alone.", "Ok.", "", "");
+                if (canTalk)
+                    InteractionPanelScript.Instance.ShowInteraction("I don't need your " + interactedWithItem.name + ". Leave me alone. I need " + itemNeededToProgress, "Ok.");
             }
         }
         else
         {
             Debug.Log("Interact object: " + this.name);
-            InteractionPanelScript.Instance.ShowInteraction(this, dialogText, firstChoiceText, secondChoiceText, thirdChoiceText);
+
+            if (canTalk)
+                InteractionPanelScript.Instance.ShowInteraction(dialogText, "Ok");
         }
     }
 
-    public void SetChoice(int choiceChosen)
+    void Spawn(Vector3 pos)
     {
-        switch(choiceChosen)
+        if (spawnObject)
         {
-            case 1:
-                switch(action1Function)
-                {
-                    case ActionFunctions.TestPrintABCDEFGH:
-
-                        break;
-
-                    case ActionFunctions.TestPrintHelloThere:
-
-                        break;
-                }
-                break;
-
-            case 2:
-
-                break;
-
-            case 3:
-
-                break;
-
-            default:
-
-                break;
+            var x = Instantiate(spawnObject, pos, Quaternion.identity);
+            x.name = x.name.Replace("(Clone)", "");
         }
     }
-
 }
