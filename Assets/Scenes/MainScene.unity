@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -238,7 +238,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 267833615}
+  - component: {fileID: 351659296}
   m_Layer: 0
   m_Name: Recovery GameObject (267833615)
   m_TagString: Untagged
@@ -246,6 +246,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &351659296
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351659295}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,17 +704,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88b2a551a066e164c96471da7f6cc46e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextPhases: []
+  responseAfterObjectiveCompleted: 0
   canTalk: 1
   spawnObject: {fileID: 0}
   dialogText: What are you up to, boring guy who nobody knows?
   responseText: 
   itemNeededToProgress: 
---- !u!4 &1805750809 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7761075096450155918, guid: d2b816884d748ba4ba58377fada9c2b0,
-    type: 3}
-  m_PrefabInstance: {fileID: 56487472}
-  m_PrefabAsset: {fileID: 0}
+  questFinishedResponse: 
 --- !u!1 &1814190916
 GameObject:
   m_ObjectHideFlags: 0
@@ -891,6 +902,11 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 147816994}
+    - target: {fileID: 543330306154793744, guid: e07bc37a9ca1ed6439a5222db52280c4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OKClicked
+      objectReference: {fileID: 0}
     - target: {fileID: 543330306422101774, guid: e07bc37a9ca1ed6439a5222db52280c4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1079,7 +1095,7 @@ PrefabInstance:
     - target: {fileID: 2889279275212158742, guid: bd8f5f4cc9798524ba858983840b4668,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2889279275212158742, guid: bd8f5f4cc9798524ba858983840b4668,
         type: 3}
@@ -1292,7 +1308,7 @@ Transform:
   - {fileID: 5750245879479522870}
   - {fileID: 8330735204890891308}
   - {fileID: 8816238704153524543}
-  - {fileID: 1805750809}
+  - {fileID: 41243374}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1436,7 +1452,7 @@ PrefabInstance:
     - target: {fileID: 8534717591044828262, guid: 68a5579c8cb9d2c42bad59e9fb7c7b67,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8534717591044828262, guid: 68a5579c8cb9d2c42bad59e9fb7c7b67,
         type: 3}
@@ -1482,7 +1498,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271690892}
+  m_GameObject: {fileID: 206466817696971373}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
