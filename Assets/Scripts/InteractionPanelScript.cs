@@ -27,8 +27,6 @@ public class InteractionPanelScript : MonoBehaviour
 
     public Text action3TextBox;
 
-    private InteractableObject interactableObjectSendingTheDialog;
-
     void Start()
     {
         Instance = this;
@@ -38,32 +36,10 @@ public class InteractionPanelScript : MonoBehaviour
         Cursor.visible = false;
     }
 
-    public void ShowInteraction(InteractableObject dialogSender, string dialogText, string action1Text, string action2Text, string action3Text)
+    public void ShowInteraction(string dialogText, string responseText = "OK")
     {
         dialogTextBox.SetText(dialogText);
-        action1TextBox.text = action1Text;
-
-        if (action2Text != "")
-        {
-            action2Button.gameObject.SetActive(true);
-            action2TextBox.text = action2Text;
-        }
-        else
-        {
-            action2Button.gameObject.SetActive(false);
-        }
-
-        if (action3Text != "")
-        {
-            action3Button.gameObject.SetActive(true);
-            action3TextBox.text = action3Text;
-        }
-        else
-        {
-            action3Button.gameObject.SetActive(false);
-        }
-
-        interactableObjectSendingTheDialog = dialogSender;
+        action1TextBox.text = responseText;
 
         DialogBoxEnabled(true);
     }
@@ -77,25 +53,9 @@ public class InteractionPanelScript : MonoBehaviour
         gameObject.SetActive(inDialog);
     }
 
-    public void Action1Clicked()
+    public void OKClicked()
     {
         // print("Action 1 chosen");
         DialogBoxEnabled(false);
-        interactableObjectSendingTheDialog.SetChoice(1);
-        interactableObjectSendingTheDialog = null;
-    }
-    public void Action2Clicked()
-    {
-        // print("Action 2 chosen");
-        DialogBoxEnabled(false);
-        interactableObjectSendingTheDialog.SetChoice(2);
-        interactableObjectSendingTheDialog = null;
-    }
-    public void Action3Clicked()
-    {
-        // print("Action 3 chosen");
-        DialogBoxEnabled(false);
-        interactableObjectSendingTheDialog.SetChoice(3);
-        interactableObjectSendingTheDialog = null;
     }
 }

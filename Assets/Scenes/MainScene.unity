@@ -665,13 +665,8 @@ MonoBehaviour:
   spawnObject: {fileID: 1253014936936858997, guid: 88fa2c498da56034981ff1905939d043,
     type: 3}
   dialogText: What are you up to, boring guy who nobody knows?
-  firstChoiceText: Let's have a drink!
-  secondChoiceText: Fuck off! [Requires 50% fun]
-  thirdChoiceText: Not much, leave me alone [-25% fun]
+  responseText: 
   itemNeededToProgress: EmptyGlass
-  action1Function: 0
-  action2Function: 0
-  action3Function: 0
 --- !u!65 &392608334
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1093,6 +1088,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160444390}
   m_CullTransparentMesh: 0
+--- !u!114 &1258444533 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1362306388, guid: e07bc37a9ca1ed6439a5222db52280c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 543330306578046799}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b1c94185eba66e4196e45db6097ee46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1265285707
 GameObject:
   m_ObjectHideFlags: 0
@@ -1473,13 +1480,8 @@ MonoBehaviour:
   spawnObject: {fileID: 1253014936936858997, guid: 88fa2c498da56034981ff1905939d043,
     type: 3}
   dialogText: What are you up to, boring guy who nobody knows?
-  firstChoiceText: Let's have a drink!
-  secondChoiceText: Fuck off! [Requires 50% fun]
-  thirdChoiceText: Not much, leave me alone [-25% fun]
+  responseText: 
   itemNeededToProgress: EmptyGlass
-  action1Function: 0
-  action2Function: 0
-  action3Function: 0
 --- !u!65 &1811119572
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2030,6 +2032,16 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 147816994}
+    - target: {fileID: 543330306154793744, guid: e07bc37a9ca1ed6439a5222db52280c4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1258444533}
+    - target: {fileID: 543330306154793744, guid: e07bc37a9ca1ed6439a5222db52280c4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OKClicked
+      objectReference: {fileID: 0}
     - target: {fileID: 543330306422101774, guid: e07bc37a9ca1ed6439a5222db52280c4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2428,7 +2440,7 @@ PrefabInstance:
     - target: {fileID: 6964593711188813965, guid: cd87b86f51653c946b09eb3ba9237c26,
         type: 3}
       propertyPath: itemNeededToProgress
-      value: GlassofWater
+      value: GlassOfWater
       objectReference: {fileID: 0}
     - target: {fileID: 6964593711188813966, guid: cd87b86f51653c946b09eb3ba9237c26,
         type: 3}
