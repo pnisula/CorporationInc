@@ -38,10 +38,24 @@ public class InteractionPanelScript : MonoBehaviour
 
     public void ShowInteraction(string dialogText, string responseText)
     {
-        dialogTextBox.SetText(dialogText);
         action1TextBox.text = responseText;
 
         DialogBoxEnabled(true);
+
+        StopAllCoroutines();
+        StartCoroutine(WriteTextWithDelay(dialogText));
+    }
+
+    IEnumerator WriteTextWithDelay(string text)
+    {
+        dialogTextBox.text = "";
+        foreach(char c in text.ToCharArray())
+        {
+            dialogTextBox.text += c;
+            yield return null;
+        }
+
+        yield return null;
     }
 
     private void DialogBoxEnabled(bool inDialog)
