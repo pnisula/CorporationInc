@@ -15,6 +15,9 @@ ModelImporter:
   - first:
       74: 4743084820616853705
     second: Armature|CameraAction
+  - first:
+      74: 2438998365002277083
+    second: Armature|SK_Character_PlayerHandsAction
   externalObjects: {}
   materials:
     materialImportMode: 1
