@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Jokes
+  m_EditorClassIdentifier: Assembly-CSharp::JokesScriptableObject
+  joke:
+  - "I told my son I was named after Thomas Jefferson\u2026 He said, \u201CBut dad,
+    your name is Brian.\u201D"
+  - Why did the invisible man turn down the job offer?
+  - What did the pirate say on his 80th birthday?
+  - 'What''s the best part about living in Switzerland? '
+  - Why couldn't the bike standup by itself?
+  - I used to have a job at a calendar factory
+  - A termite walks into a bar and asks,
+  - 'SON: *hands my Dad his 50th birthday card*,'
+  - What did the buffalo say to his son when he dropped him off at school?
+  - 'I just watched a documentary about beavers. '
+  punchLines:
+  - " I said, \u201CI know, but I was named AFTER Thomas Jefferson.\u201D"
+  - He couldn't see himself doing it.
+  - AYE MATEY
+  - I don't know, but the flag is a big plus.
+  - It was two tired.
+  - but I got the sack because I took a couple of days off.
+  - '"Is the bar tender here?"'
+  - 'DAD: You know, one would have been enough.'
+  - Bison
+  - It was the best dam show I ever saw!
