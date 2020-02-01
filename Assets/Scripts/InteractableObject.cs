@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
+    [SerializeField]
+    private string dialogText;
+
+    [SerializeField]
+    private string firstChoiceText;
+
+    [SerializeField]
+    private string secondChoiceText;
+
+    [SerializeField]
+    private string thirdChoiceText;
+
     public void Interact(Transform interactedWithItem)
     {
         if (interactedWithItem)
@@ -13,7 +25,29 @@ public class InteractableObject : MonoBehaviour
         else
         {
             Debug.Log("Interact object: " + this.name);
-            InteractionPanelScript.Instance.ShowInteraction("ABCDEFGHIJKLMNOPQRSTUVWXYZ", "A1", "A2", "A3");
+            InteractionPanelScript.Instance.ShowInteraction(this, dialogText, firstChoiceText, secondChoiceText, thirdChoiceText);
+        }
+    }
+
+    public void SetChoice(int choiceChosen)
+    {
+        switch(choiceChosen)
+        {
+            case 1:
+
+                break;
+
+            case 2:
+
+                break;
+
+            case 3:
+
+                break;
+
+            default:
+
+                break;
         }
     }
 }
