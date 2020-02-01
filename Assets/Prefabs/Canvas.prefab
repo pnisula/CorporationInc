@@ -11,13 +11,14 @@ GameObject:
   - component: {fileID: 543330304743162480}
   - component: {fileID: 543330304743162382}
   - component: {fileID: 543330304743162383}
+  - component: {fileID: 1362306388}
   m_Layer: 5
-  m_Name: Panel
-  m_TagString: Untagged
+  m_Name: InteractionPanel
+  m_TagString: InteractionPanel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &543330304743162480
 RectTransform:
   m_ObjectHideFlags: 0
@@ -77,6 +78,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1362306388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543330304743162481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b1c94185eba66e4196e45db6097ee46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  raycaster: {fileID: 0}
+  controller: {fileID: 0}
+  dialogTextBox: {fileID: 543330305186929117}
+  action1Button: {fileID: 543330306154793744}
+  action2Button: {fileID: 543330306065682169}
+  action3Button: {fileID: 543330305250356354}
+  action1TextBox: {fileID: 543330306258504581}
+  action2TextBox: {fileID: 543330305264337747}
+  action3TextBox: {fileID: 543330306220468104}
 --- !u!1 &543330304806000533
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,7 +340,7 @@ GameObject:
   - component: {fileID: 543330305250356353}
   - component: {fileID: 543330305250356354}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: Action3Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -422,7 +444,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 543330305250356353}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1362306388}
+        m_MethodName: Action3Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &543330305264337749
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +468,7 @@ GameObject:
   - component: {fileID: 543330305264337746}
   - component: {fileID: 543330305264337747}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Action2Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -513,7 +546,7 @@ GameObject:
   - component: {fileID: 543330306065682168}
   - component: {fileID: 543330306065682169}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Action2Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -617,7 +650,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 543330306065682168}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1362306388}
+        m_MethodName: Action2Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &543330306154793746
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,7 +675,7 @@ GameObject:
   - component: {fileID: 543330306154793775}
   - component: {fileID: 543330306154793744}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Action1Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -735,7 +779,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 543330306154793775}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1362306388}
+        m_MethodName: Action1Clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &543330306220468106
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,7 +803,7 @@ GameObject:
   - component: {fileID: 543330306220468103}
   - component: {fileID: 543330306220468104}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Action3Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -825,7 +880,7 @@ GameObject:
   - component: {fileID: 543330306258504580}
   - component: {fileID: 543330306258504581}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Action1Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

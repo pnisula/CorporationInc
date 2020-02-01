@@ -13,7 +13,7 @@ public class InteractableObject : MonoBehaviour
         else
         {
             Debug.Log("Interact object: " + this.name);
-
+            InteractionPanelScript.Instance.ShowInteraction("ABCDEFGHIJKLMNOPQRSTUVWXYZ", "A1", "A2", "A3");
         }
     }
 }
