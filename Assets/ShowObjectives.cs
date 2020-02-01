@@ -14,7 +14,7 @@ public class ShowObjectives : MonoBehaviour
     void Start()
     {
         startRotation = transform.rotation;
-        endRotation = Quaternion.Euler(-90.0f,0.0f,0.0f);
+        endRotation = Quaternion.Euler(0.0f,0.0f,0.0f);
 
     }
     void Update()
