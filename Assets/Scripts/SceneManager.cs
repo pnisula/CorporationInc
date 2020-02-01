@@ -22,21 +22,34 @@ public class SceneManager : MonoBehaviour
 
     public bool marketingGoalDone = false;
     public bool legalGoalDone = false;
-    public bool accountingGoalDone = false;   
+    public bool accountingGoalDone = false;
+    public GameObject GameWon;
+
 
     public void SetMarketingGoalDone()
     {
         marketingGoalDone = true;
-        //FindObjectsOfType<ObjectiveUIManager>().UpdateToggles();
+        FindObjectsOfType<ObjectiveUIManager>()[0].UpdateToggles();
+        CheckWinningCondition();
     }
     public void SetLegalGoalDone()
     {
         legalGoalDone = true;
-        //FindObjectsOfType<ObjectiveUIManager>().UpdateToggles();
+        FindObjectsOfType<ObjectiveUIManager>()[0].UpdateToggles();
+        CheckWinningCondition();
     }
     public void SetAccountingGoalDone()
     {
         accountingGoalDone = true;
-        //FindObjectsOfType<ObjectiveUIManager>().UpdateToggles();
+        FindObjectsOfType<ObjectiveUIManager>()[0].UpdateToggles();
+        CheckWinningCondition();
+    }         
+
+    public void CheckWinningCondition()
+    {
+        if(accountingGoalDone && marketingGoalDone && legalGoalDone)
+        {
+            GameWon.SetActive(true);
+        }
     }
 }

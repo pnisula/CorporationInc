@@ -47,6 +47,20 @@ public class Raycaster : MonoBehaviour
                 }
 
             }
+        }
+
+        
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            SceneManager.Instance.SetMarketingGoalDone();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            SceneManager.Instance.SetLegalGoalDone();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            SceneManager.Instance.SetAccountingGoalDone();
         }         
     }
 }
