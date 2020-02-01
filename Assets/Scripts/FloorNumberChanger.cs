@@ -5,6 +5,7 @@ using TMPro;
 
 public class FloorNumberChanger : MonoBehaviour
 {
+    public Animator handAnimator;
     public TextMeshProUGUI floorNumberText;
     public GameObject doorLeft;
     public GameObject doorRight;
@@ -22,10 +23,12 @@ public class FloorNumberChanger : MonoBehaviour
 
             floorNumber = (int)time;
             floorNumberText.text = floorNumber.ToString();
+            handAnimator.SetBool("HandInFront", true);
         }
         if(!doorsOpen && floorNumber==12)
         {
             doorsOpen = true;
+            handAnimator.SetBool("HandInFront", false);
             doorLeft.SetActive(false);
             doorRight.SetActive(false);
         }
