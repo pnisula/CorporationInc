@@ -33,7 +33,10 @@ public class InteractableObject : MonoBehaviour
 
     public void Interact(Transform interactedWithItem)
     {
-        if (interactedWithItem && interactable)
+        if (!interactable)
+            return;
+
+        if (interactedWithItem)
         {
             if (interactedWithItem.name == itemNeededToProgress)
             {
@@ -76,6 +79,8 @@ public class InteractableObject : MonoBehaviour
                 else
                 {
                     // it means it reached the end of the interaction and it has nothing else to say
+
+                    print("Response queue is empty. Object is now set to non interactable");
                     interactable = false;
                 }
             }
