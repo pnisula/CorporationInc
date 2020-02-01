@@ -439,4 +439,4 @@ MonoBehaviour:
   jokes: {fileID: 11400000, guid: 088b75bc50469ed4b80951d2e9423298, type: 2}
   jokesText: {fileID: 2129121666}
   jokeCanvas: {fileID: 1082678278}
-  NotSoFunnyAnymore: 1
+  NotSoFunnyAnymore: 0

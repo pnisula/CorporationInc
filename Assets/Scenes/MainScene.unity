@@ -230,22 +230,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4907159172382414237}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &351659295
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 267833615}
-  m_Layer: 0
-  m_Name: Recovery GameObject (267833615)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,7 +320,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &758630995 stripped
 MonoBehaviour:
@@ -783,17 +767,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88b2a551a066e164c96471da7f6cc46e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextPhases: []
+  responseAfterObjectiveCompleted: 0
   canTalk: 1
   spawnObject: {fileID: 0}
   dialogText: What are you up to, boring guy who nobody knows?
   responseText: 
   itemNeededToProgress: 
---- !u!4 &1805750809 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7761075096450155918, guid: d2b816884d748ba4ba58377fada9c2b0,
-    type: 3}
-  m_PrefabInstance: {fileID: 56487472}
-  m_PrefabAsset: {fileID: 0}
+  questFinishedResponse: 
 --- !u!1 &1814190916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,7 +1025,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &206466817696971373
 GameObject:
@@ -1120,7 +1101,7 @@ PrefabInstance:
     - target: {fileID: 543330306422101774, guid: e07bc37a9ca1ed6439a5222db52280c4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 543330306422101774, guid: e07bc37a9ca1ed6439a5222db52280c4,
         type: 3}
@@ -1339,7 +1320,7 @@ PrefabInstance:
     - target: {fileID: 4578028795382943490, guid: 5a72c29f71cf5cc4f8efc2fed3705815,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4578028795382943490, guid: 5a72c29f71cf5cc4f8efc2fed3705815,
         type: 3}
@@ -1413,7 +1394,7 @@ PrefabInstance:
     - target: {fileID: 4907159171990672280, guid: 2f6330b8434da9741a5b736632e3cb54,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4907159171990672280, guid: 2f6330b8434da9741a5b736632e3cb54,
         type: 3}
@@ -1444,6 +1425,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 500977653, guid: 4436d3308434f474590d6af0a083697a, type: 3}
+      propertyPath: jokes
+      value: 
+      objectReference: {fileID: 11400000, guid: 088b75bc50469ed4b80951d2e9423298,
+        type: 2}
+    - target: {fileID: 500977653, guid: 4436d3308434f474590d6af0a083697a, type: 3}
+      propertyPath: NotSoFunnyAnymore
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5116502497011861718, guid: 4436d3308434f474590d6af0a083697a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1554,9 +1544,9 @@ Transform:
   - {fileID: 5750245879479522870}
   - {fileID: 8330735204890891308}
   - {fileID: 8816238704153524543}
-  - {fileID: 1805750809}
+  - {fileID: 41243374}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &8330735204890891308
 Transform:
@@ -1744,7 +1734,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1271690892}
+  m_GameObject: {fileID: 206466817696971373}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -1828,7 +1818,7 @@ PrefabInstance:
     - target: {fileID: 8199832762337789668, guid: 8bd04bcc9f7df1147a7a8535b30329de,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8199832762337789668, guid: 8bd04bcc9f7df1147a7a8535b30329de,
         type: 3}
