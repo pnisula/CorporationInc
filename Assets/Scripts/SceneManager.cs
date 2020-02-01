@@ -19,4 +19,24 @@ public class SceneManager : MonoBehaviour
             _instance = this;
         }
     }
+
+    public bool marketingGoalDone = false;
+    public bool legalGoalDone = false;
+    public bool accountingGoalDone = false;   
+
+    public void SetMarketingGoalDone()
+    {
+        marketingGoalDone = true;
+        //FindObjectsOfType<ObjectiveUIManager>().UpdateToggles();
+    }
+    public void SetLegalGoalDone()
+    {
+        legalGoalDone = true;
+        //FindObjectsOfType<ObjectiveUIManager>().UpdateToggles();
+    }
+    public void SetAccountingGoalDone()
+    {
+        accountingGoalDone = true;
+        //FindObjectsOfType<ObjectiveUIManager>().UpdateToggles();
+    }
 }
