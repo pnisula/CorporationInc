@@ -8,11 +8,12 @@ public class InteractableObject : MonoBehaviour
     {
         if (interactedWithItem)
         {
-            Debug.Log("Interact object: " + this.name + " with item: "+interactedWithItem.gameObject.name);
+            Debug.Log("Interact object: " + this.name + " with item: " + interactedWithItem.gameObject.name);
         }
         else
         {
             Debug.Log("Interact object: " + this.name);
+
         }
     }
 }
