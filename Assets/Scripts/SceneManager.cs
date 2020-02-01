@@ -19,14 +19,16 @@ public class SceneManager : MonoBehaviour
             _instance = this;
         }
     }
-
+    private bool playRecord;
     public bool marketingGoalDone = false;
     public bool legalGoalDone = false;
     public bool accountingGoalDone = false;
     public GameObject GameWon;
     public GameObject Player;
     public GameObject DJCamera;
-    public GameObject Teller;    
+    public GameObject Teller;
+    public float timePlayed;
+    public float maxTimeForPlaying = 10f;
 
     public void SetMarketingGoalDone()
     {
@@ -62,5 +64,24 @@ public class SceneManager : MonoBehaviour
         Player.SetActive(false);
         DJCamera.SetActive(true);
         Teller.SetActive(true);
+        playRecord = true;
+    }
+    void Update()
+    {
+        if(playRecord)
+        {
+            timePlayed += Time.deltaTime;
+            if(timePlayed>maxTimeForPlaying)
+            {
+                StopVinyl();
+            }
+        }
+    }
+    public void StopVinyl()
+    {
+        playRecord = false;
+        Player.SetActive(true);
+        DJCamera.SetActive(false);
+        Teller.SetActive(false);
     }
 }
