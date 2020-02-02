@@ -12,6 +12,7 @@ TagManager:
   - Crowd
   - Comedian
   - VIP
+  - Boss
   layers:
   - Default
   - TransparentFX
