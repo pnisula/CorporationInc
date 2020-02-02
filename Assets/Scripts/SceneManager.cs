@@ -81,6 +81,7 @@ public class SceneManager : MonoBehaviour
         }
         GameObject comedian = GameObject.FindGameObjectWithTag("Comedian");
         comedian.GetComponentInChildren<Animator>().SetBool("BookLost", true);
+        GameObject.Find("Stage").GetComponent<JokeGenerator>().NotSoFunnyAnymore = true;
     }
     void Update()
     {
