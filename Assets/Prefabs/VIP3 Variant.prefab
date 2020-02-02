@@ -11,8 +11,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 2, z: 1}
-  m_Center: {x: 0, y: 0.99, z: 0}
+  m_Size: {x: 1, y: 1.94, z: 1}
+  m_Center: {x: 0, y: 0.98, z: 0}
 --- !u!114 &1390031355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25,14 +25,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88b2a551a066e164c96471da7f6cc46e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextPhases: []
-  responseAfterObjectiveCompleted: 3
+  nextPhases:
+  - responseAfterObjectiveCompleted: 0
+    spawnObject: {fileID: 0}
+    dialogText: You already have my signature. Go away!
+    responseText: OK
+    itemNeededToProgress: 
+    questFinishedResponse: 
+  responseAfterObjectiveCompleted: 2
   canTalk: 1
   spawnObject: {fileID: 0}
-  dialogText: I need to be more funnier.
+  dialogText: That comedian is hilarious. I wish I could be as funny. I'm too sad
+    to give you my signature.
   responseText: OK
   itemNeededToProgress: Book Of Jokes
-  questFinishedResponse: Thanks! Here's my signature.
+  questFinishedResponse: This is awesome material. I'll be in the spotlight of the
+    party. Have my signature.
 --- !u!1001 &4581389822332020725
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40,6 +48,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 444107176, guid: fe385fc1b0b131341aa65b7e49476096, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 444107178, guid: fe385fc1b0b131341aa65b7e49476096, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1139323416871620012, guid: fe385fc1b0b131341aa65b7e49476096,
         type: 3}
       propertyPath: m_Name
@@ -53,7 +69,7 @@ PrefabInstance:
     - target: {fileID: 1139323416871620013, guid: fe385fc1b0b131341aa65b7e49476096,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.563415
+      value: -6.662
       objectReference: {fileID: 0}
     - target: {fileID: 1139323416871620013, guid: fe385fc1b0b131341aa65b7e49476096,
         type: 3}
@@ -63,7 +79,7 @@ PrefabInstance:
     - target: {fileID: 1139323416871620013, guid: fe385fc1b0b131341aa65b7e49476096,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.794414
+      value: -7.072
       objectReference: {fileID: 0}
     - target: {fileID: 1139323416871620013, guid: fe385fc1b0b131341aa65b7e49476096,
         type: 3}
@@ -105,6 +121,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1432589593306976526, guid: fe385fc1b0b131341aa65b7e49476096,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a3a488d1aca2da4aab53891e0cdc33c, type: 2}
     m_RemovedComponents:
     - {fileID: 444107177, guid: fe385fc1b0b131341aa65b7e49476096, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fe385fc1b0b131341aa65b7e49476096, type: 3}
