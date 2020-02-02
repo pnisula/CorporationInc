@@ -109,5 +109,10 @@ public class Raycaster : MonoBehaviour
         {
             SceneManager.Instance.SetAccountingGoalDone();
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Debug.Log("QUIT");
+            Application.Quit();
+        }
     }
 }
