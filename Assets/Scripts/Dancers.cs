@@ -17,13 +17,13 @@ public class Dancers : MonoBehaviour
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         agent.destination = DancingLocation.position;        
         shouldMove = true;
-        danceAnimator.SetBool("Walking", true);
+        danceAnimator.SetFloat("Speed", 1.0f);
         danceAnimator.SetBool("TimeToDance", false);
     }
     void Dance()
     {        
         danceAnimator.SetBool("TimeToDance", true);
-        danceAnimator.SetBool("Walking", false);
+        danceAnimator.SetFloat("Speed", 0.0f);
     }
     // Update is called once per frame
     void Update()
