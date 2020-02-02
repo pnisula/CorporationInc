@@ -31,8 +31,13 @@ public class Raycaster : MonoBehaviour
             }
             if (hitForInteractPopup.collider.CompareTag("VIP"))
             {
-                pickupText.SetActive(true);
-                interactText.SetActive(false);
+                pickupText.SetActive(false);
+                interactText.SetActive(true);
+            }
+            if (hitForInteractPopup.collider.CompareTag("Boss"))
+            {
+                pickupText.SetActive(false);
+                interactText.SetActive(true);
             }
         }
         else
@@ -70,6 +75,11 @@ public class Raycaster : MonoBehaviour
                 {
                     if (hit.transform.gameObject.GetComponent<VIPCustomScript>() != null)
                         hit.transform.gameObject.GetComponent<VIPCustomScript>().Interact(holdingItem);
+                }
+                else if (hit.collider.CompareTag("Boss"))
+                {
+                    if (hit.transform.gameObject.GetComponent<BossScript>() != null)
+                        hit.transform.gameObject.GetComponent<BossScript>().Interact(holdingItem);
                 }
             }
             else
