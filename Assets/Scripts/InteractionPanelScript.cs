@@ -8,7 +8,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class InteractionPanelScript : MonoBehaviour
 {
     public Raycaster raycaster;
-
+    public GameObject GameWonCanvas;
     public FirstPersonController controller;
 
     public static InteractionPanelScript Instance { get; private set; }
@@ -71,5 +71,13 @@ public class InteractionPanelScript : MonoBehaviour
     {
         // print("Action 1 chosen");
         DialogBoxEnabled(false);
+        if(SceneManager.Instance.GameWonCondition)
+        {
+            GameWonCanvas.SetActive(true);
+            controller.enabled = false;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            raycaster.enabled = false;
+        }
     }
 }

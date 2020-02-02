@@ -11,6 +11,7 @@ TagManager:
   - Dancers
   - Crowd
   - Comedian
+  - VIP
   layers:
   - Default
   - TransparentFX
