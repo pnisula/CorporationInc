@@ -1,5 +1,39 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &1764847524936264103
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6737835305524405101}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.35, y: 1.4854082, z: 0.35}
+  m_Center: {x: 0, y: 0.7427041, z: 0}
+--- !u!114 &1764847524936264107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6737835305524405101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88b2a551a066e164c96471da7f6cc46e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextPhases: []
+  responseAfterObjectiveCompleted: 1
+  canTalk: 0
+  spawnObject: {fileID: 7930078508297757954, guid: 6ea9e2ff6a31b7443b215e01ed089639,
+    type: 3}
+  dialogText: 
+  responseText: 
+  itemNeededToProgress: EmptyGlassOfWater
+  questFinishedResponse: 
 --- !u!1 &9192317404818186555
 GameObject:
   m_ObjectHideFlags: 0
@@ -41,6 +75,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0bd7b40e5b828884dbc8f918b741f871, type: 3}
       propertyPath: m_Name
       value: mob_WaterCooler_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0bd7b40e5b828884dbc8f918b741f871, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0bd7b40e5b828884dbc8f918b741f871, type: 3}
       propertyPath: m_LocalPosition.x
@@ -88,6 +126,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bd7b40e5b828884dbc8f918b741f871, type: 3}
+--- !u!1 &6737835305524405101 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 0bd7b40e5b828884dbc8f918b741f871,
+    type: 3}
+  m_PrefabInstance: {fileID: 6737835305524504013}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6737835305524117325 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 0bd7b40e5b828884dbc8f918b741f871,
