@@ -98,6 +98,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VomitingGuy
       objectReference: {fileID: 0}
+    - target: {fileID: 1638638372818949389, guid: 3f0e064d0a84e0547afdea8db9071d72,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e8b07b419d1133b4cb72fe035fab36b0, type: 2}
     m_RemovedComponents:
     - {fileID: 886309644947773786, guid: 3f0e064d0a84e0547afdea8db9071d72, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3f0e064d0a84e0547afdea8db9071d72, type: 3}
