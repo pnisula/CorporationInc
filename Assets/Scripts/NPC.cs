@@ -20,12 +20,12 @@ public class NPC : MonoBehaviour
 
         shouldMove = true;
         walkAnimator.SetFloat("Speed", 1.0f);
-        walkAnimator.SetBool("TimeToDance", false);
+        walkAnimator.SetBool("TimeToDance", false);        
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {        
         if (shouldMove && agent != null && !agent.pathPending)
         {
             if (agent.remainingDistance <= agent.stoppingDistance)
@@ -37,7 +37,7 @@ public class NPC : MonoBehaviour
                     SelectNewWaypoint();
                 }
             }
-        }
+        }     
     }
     void SelectNewWaypoint()
     {

@@ -2716,6 +2716,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DancingGuy1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3179345959849597108, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6177982376167852165, guid: acaa29ef9c0854d4595b3aff0d98380f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7346,7 +7351,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: WalkingWoman
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8368201923408450328, guid: 05466f0af9ee7fb45b1fada243c3c0bd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 210698366189895516, guid: 05466f0af9ee7fb45b1fada243c3c0bd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 05466f0af9ee7fb45b1fada243c3c0bd, type: 3}
 --- !u!4 &6542431766202684771
 Transform:
