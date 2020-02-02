@@ -9,6 +9,7 @@ public class InteractionPanelScript : MonoBehaviour
 {
     public Raycaster raycaster;
     public GameObject GameWonCanvas;
+    public GameObject Fireworks;
     public FirstPersonController controller;
 
     public static InteractionPanelScript Instance { get; private set; }
@@ -79,6 +80,7 @@ public class InteractionPanelScript : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             raycaster.enabled = false;
             */
+            Fireworks.SetActive(true);
         }
     }
 }
