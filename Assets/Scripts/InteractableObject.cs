@@ -106,7 +106,7 @@ public class InteractableObject : MonoBehaviour
     {
         if (spawnObject)
         {
-            var x = Instantiate(spawnObject, pos, Quaternion.identity);
+            var x = Instantiate(spawnObject, pos + transform.forward, Quaternion.identity);
             x.name = x.name.Replace("(Clone)", "");
         }
     }
