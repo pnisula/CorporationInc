@@ -10,7 +10,10 @@ public class FloorNumberChanger : MonoBehaviour
     public GameObject doorLeft;
     public GameObject doorRight;
     public int maxNumberOfFloors = 134;
+    public GameObject elevatorHumming;
+    
     float time = 122.0f;
+
     int floorNumber = 122;
     bool doorsOpen;
     // Update is called once per frame
@@ -31,6 +34,8 @@ public class FloorNumberChanger : MonoBehaviour
             handAnimator.SetBool("HandInFront", false);
             doorLeft.SetActive(false);
             doorRight.SetActive(false);
+            elevatorHumming.SetActive(false);
+            GetComponent<AudioSource>().Play();
         }
     }
 }
