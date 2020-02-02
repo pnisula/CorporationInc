@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!65 &1452230570
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3719361580429156798}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.94, z: 1}
+  m_Center: {x: 0, y: 0.98, z: 0}
+--- !u!114 &1452230566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3719361580429156798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88b2a551a066e164c96471da7f6cc46e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextPhases:
+  - responseAfterObjectiveCompleted: 0
+    spawnObject: {fileID: 0}
+    dialogText: You already have my signature. Go away!
+    responseText: OK
+    itemNeededToProgress: 
+    questFinishedResponse: 
+  responseAfterObjectiveCompleted: 2
+  canTalk: 1
+  spawnObject: {fileID: 0}
+  dialogText: I need to sober a little.
+  responseText: OK
+  itemNeededToProgress: Full Glass Of Water
+  questFinishedResponse: Here's my signature.
+--- !u!1001 &2270550786106702090
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3179345959849597108, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_Name
+      value: VIP1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3179345959849597108, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177982376167852165, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.5988126
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177982376167852165, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0000006556511
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177982376167852165, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.62297
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177982376167852165, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177982376167852165, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.4770585
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177982376167852165, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177982376167852165, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.87887156
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177982376167852165, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177982376167852165, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177982376167852165, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -56.987003
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177982376167852165, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 608939588, guid: acaa29ef9c0854d4595b3aff0d98380f, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: acaa29ef9c0854d4595b3aff0d98380f, type: 3}
+--- !u!1 &3719361580429156798 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3179345959849597108, guid: acaa29ef9c0854d4595b3aff0d98380f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2270550786106702090}
+  m_PrefabAsset: {fileID: 0}
