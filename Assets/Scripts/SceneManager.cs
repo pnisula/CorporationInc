@@ -29,6 +29,7 @@ public class SceneManager : MonoBehaviour
     public GameObject Teller;
     public float timePlayed;
     public float maxTimeForPlaying = 10f;
+    public bool VIPGuyIsHappy = false;
 
     public void SetMarketingGoalDone()
     {
@@ -89,6 +90,7 @@ public class SceneManager : MonoBehaviour
             if(timePlayed>maxTimeForPlaying)
             {
                 StopVinyl();
+                VIPGuyIsHappy = true;
             }
         }
     }
