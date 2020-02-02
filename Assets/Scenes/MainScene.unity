@@ -5248,6 +5248,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1550226913}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2111203019 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6241898514444962197, guid: 2765f160fad6d7243a4e7f8eb481655c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1001865021}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2121419120
 GameObject:
   m_ObjectHideFlags: 0
@@ -5389,6 +5395,10 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 147816994}
+    - target: {fileID: 1362306388, guid: e07bc37a9ca1ed6439a5222db52280c4, type: 3}
+      propertyPath: Fireworks
+      value: 
+      objectReference: {fileID: 2111203019}
     - target: {fileID: 543330306422101774, guid: e07bc37a9ca1ed6439a5222db52280c4,
         type: 3}
       propertyPath: m_LocalPosition.x

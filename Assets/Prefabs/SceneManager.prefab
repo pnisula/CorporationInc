@@ -53,3 +53,5 @@ MonoBehaviour:
   timePlayed: 0
   maxTimeForPlaying: 10
   VIPGuyIsHappy: 0
+  GameWonCondition: 0
+  recordPlayer: {fileID: 0}

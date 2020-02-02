@@ -629,6 +629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   raycaster: {fileID: 0}
   GameWonCanvas: {fileID: 1544487889}
+  Fireworks: {fileID: 0}
   controller: {fileID: 0}
   dialogTextBox: {fileID: 543330305186929117}
   action1Button: {fileID: 543330306154793744}

@@ -31,6 +31,7 @@ public class SceneManager : MonoBehaviour
     public float maxTimeForPlaying = 10f;
     public bool VIPGuyIsHappy = false;
     public bool GameWonCondition = false;
+    public GameObject recordPlayer;
 
     public void SetMarketingGoalDone()
     {
@@ -61,6 +62,7 @@ public class SceneManager : MonoBehaviour
     {
         Debug.Log("Play Vinyl");
 
+        recordPlayer.GetComponent<AudioSource>().Play();
         Player.SetActive(false);
         DJCamera.SetActive(true);
         Teller.SetActive(true);
