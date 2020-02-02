@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!65 &1870436996
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567104908440053129}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.87, z: 1}
+  m_Center: {x: 0, y: 0.93, z: 0}
+--- !u!114 &1870436992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8567104908440053129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88b2a551a066e164c96471da7f6cc46e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextPhases: []
+  responseAfterObjectiveCompleted: 4
+  canTalk: 1
+  spawnObject: {fileID: 0}
+  dialogText: I wish there where music.
+  responseText: OK
+  itemNeededToProgress: 
+  questFinishedResponse: 
+--- !u!1001 &6555893915994275133
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3179345959849597108, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_Name
+      value: VIP2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3179345959849597108, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177982376167852165, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 17.82561
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177982376167852165, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0000012516975
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177982376167852165, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.480387
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177982376167852165, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177982376167852165, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.44312724
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177982376167852165, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177982376167852165, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.89645875
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177982376167852165, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177982376167852165, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177982376167852165, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -52.607002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6177982376167852165, guid: acaa29ef9c0854d4595b3aff0d98380f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 608939588, guid: acaa29ef9c0854d4595b3aff0d98380f, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: acaa29ef9c0854d4595b3aff0d98380f, type: 3}
+--- !u!1 &8567104908440053129 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3179345959849597108, guid: acaa29ef9c0854d4595b3aff0d98380f,
+    type: 3}
+  m_PrefabInstance: {fileID: 6555893915994275133}
+  m_PrefabAsset: {fileID: 0}
