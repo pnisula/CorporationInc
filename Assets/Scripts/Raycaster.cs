@@ -3,12 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Raycaster : MonoBehaviour
-{    
+{
     public float interactionDistance = 3f;
     Transform holdingItem;
 
+    public GameObject interactText;
+
+    public GameObject pickupText;
+
     void Update()
     {
+        RaycastHit hitForInteractPopup;
+        if (Physics.Raycast(transform.position, transform.forward, out hitForInteractPopup, interactionDistance, ~(1 << 8)))
+        {
+            // print("Raycast hit: " + hitForInteractPopup.collider.gameObject.name);
+
+            if (hitForInteractPopup.collider.CompareTag("Interactable"))
+            {
+                interactText.SetActive(true);
+                pickupText.SetActive(false);
+            }
+
+            if (hitForInteractPopup.collider.CompareTag("Pickable"))
+            {
+                pickupText.SetActive(true);
+                interactText.SetActive(false);
+            }
+        }
+        else
+        {
+            interactText.SetActive(false);
+            pickupText.SetActive(false);
+        }
+
         RaycastHit hit;
 
         Debug.DrawRay(transform.position, transform.forward * interactionDistance);
@@ -33,7 +60,7 @@ public class Raycaster : MonoBehaviour
                         hit.transform.gameObject.GetComponent<PickableObject>().PickUp();
                         holdingItem = hit.transform;
                     }
-                }                
+                }
             }
             else
             {
@@ -49,7 +76,7 @@ public class Raycaster : MonoBehaviour
             }
         }
 
-        
+
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             SceneManager.Instance.SetMarketingGoalDone();
@@ -61,6 +88,6 @@ public class Raycaster : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             SceneManager.Instance.SetAccountingGoalDone();
-        }         
+        }
     }
 }
