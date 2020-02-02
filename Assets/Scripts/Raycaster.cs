@@ -60,7 +60,7 @@ public class Raycaster : MonoBehaviour
                 else if (hit.collider.CompareTag("Pickable"))
                 {
                     Debug.Log("Pickable Object clicked");
-                    if (hit.transform.gameObject.GetComponent<PickableObject>() != null)
+                    if (hit.transform.gameObject.GetComponent<PickableObject>() != null && !holdingItem)
                     {
                         hit.transform.gameObject.GetComponent<PickableObject>().PickUp();
                         holdingItem = hit.transform;

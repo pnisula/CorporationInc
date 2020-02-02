@@ -13,10 +13,14 @@ public class JokeGenerator : MonoBehaviour
     bool tellPunchLine = false;
     int jokeIndex = 0;
     private AudioSource jokeSounds;
+    public AudioSource booing;
+    public AudioSource cheer;
+    bool funnyjoke;
     private Animator jokeAnimator;
 
     void Start()
     {
+        funnyjoke = true;
         jokeSounds = GetComponent<AudioSource>();
         jokeAnimator = GameObject.FindGameObjectWithTag("Comedian").GetComponent<Animator>();
     }
@@ -35,10 +39,10 @@ public class JokeGenerator : MonoBehaviour
         tellJoke = false;        
         jokesText.text = jokes.joke[jokeIndex];
         jokeCanvas.SetActive(true);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(4);
         
         jokeCanvas.SetActive(false);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3);
 
         tellPunchLine = true;
         Debug.Log("Tell Joke: "+jokeIndex);
@@ -51,6 +55,7 @@ public class JokeGenerator : MonoBehaviour
         {
             Debug.Log("Random punchline");
             jokesText.text = jokes.punchLines[RandomNumber()];
+            funnyjoke = false;
         }
         else
         {
@@ -64,9 +69,16 @@ public class JokeGenerator : MonoBehaviour
         Debug.Log("Tell Punch Line: "+jokeIndex);        
         jokeCanvas.SetActive(false);
         ReadBook();
-        jokeSounds.Play();        
-
-        yield return new WaitForSeconds(1);
+        jokeSounds.Play();
+        if (funnyjoke)
+        {
+            cheer.Play();
+        }
+        else
+        {
+            booing.Play();
+        }
+        yield return new WaitForSeconds(6);
 
         if (jokeIndex < jokes.joke.Length - 1)
         {
