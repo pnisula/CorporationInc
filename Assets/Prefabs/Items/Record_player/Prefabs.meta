@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Prefabs/Items/Record_player/Prefabs.meta
 guid: 79043c23bfb67a24aa584ff909e13b43
+=======
+guid: 2bf362ced7e64fe4a816546eb3881827
+>>>>>>> 813edb80dca2b7cc557b7f28c3bf7f63de65fd34:Assets/HQ Old Books.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
