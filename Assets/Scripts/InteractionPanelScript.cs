@@ -74,10 +74,11 @@ public class InteractionPanelScript : MonoBehaviour
         if(SceneManager.Instance.GameWonCondition)
         {
             GameWonCanvas.SetActive(true);
-            controller.enabled = false;
+            /*controller.enabled = false;
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             raycaster.enabled = false;
+            */
         }
     }
 }
