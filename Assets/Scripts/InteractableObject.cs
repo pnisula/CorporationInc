@@ -42,7 +42,7 @@ public class InteractableObject : MonoBehaviour
             {
                 Debug.Log("Interact object: " + this.name + " with item: " + interactedWithItem.gameObject.name);
                 if (canTalk)
-                    InteractionPanelScript.Instance.ShowInteraction("Thank you for the " + interactedWithItem.name + "." + questFinishedResponse, "Continue");
+                    InteractionPanelScript.Instance.ShowInteraction(/**"Thank you for the " + interactedWithItem.name + "." + */questFinishedResponse, "Continue");
 
                 switch(responseAfterObjectiveCompleted)
                 {

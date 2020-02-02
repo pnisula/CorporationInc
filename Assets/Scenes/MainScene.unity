@@ -689,6 +689,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: TalkingAmbience (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1248893732195114609, guid: b62b0e19c7dba5a4880c72945d6fdd8b,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248893732195114609, guid: b62b0e19c7dba5a4880c72945d6fdd8b,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1248893732195114614, guid: b62b0e19c7dba5a4880c72945d6fdd8b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -759,6 +769,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2080916006797398363, guid: e702901592e30b44885843c1857f30d3,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080916006797398363, guid: e702901592e30b44885843c1857f30d3,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3958564545530376524, guid: e702901592e30b44885843c1857f30d3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1337,6 +1357,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2080916006797398363, guid: e702901592e30b44885843c1857f30d3,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080916006797398363, guid: e702901592e30b44885843c1857f30d3,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3958564545530376524, guid: e702901592e30b44885843c1857f30d3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2918,6 +2948,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2080916006797398363, guid: e702901592e30b44885843c1857f30d3,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080916006797398363, guid: e702901592e30b44885843c1857f30d3,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3958564545530376524, guid: e702901592e30b44885843c1857f30d3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -5111,6 +5151,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2080916006797398363, guid: e702901592e30b44885843c1857f30d3,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080916006797398363, guid: e702901592e30b44885843c1857f30d3,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 8959059938999132471, guid: e702901592e30b44885843c1857f30d3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5548,6 +5598,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TalkingAmbience (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248893732195114609, guid: b62b0e19c7dba5a4880c72945d6fdd8b,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248893732195114609, guid: b62b0e19c7dba5a4880c72945d6fdd8b,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1248893732195114614, guid: b62b0e19c7dba5a4880c72945d6fdd8b,
         type: 3}
@@ -6175,6 +6235,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TalkingAmbience
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248893732195114609, guid: b62b0e19c7dba5a4880c72945d6fdd8b,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248893732195114609, guid: b62b0e19c7dba5a4880c72945d6fdd8b,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1248893732195114614, guid: b62b0e19c7dba5a4880c72945d6fdd8b,
         type: 3}
@@ -7190,6 +7260,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2080916006797398363, guid: e702901592e30b44885843c1857f30d3,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080916006797398363, guid: e702901592e30b44885843c1857f30d3,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3958564545530376524, guid: e702901592e30b44885843c1857f30d3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -8029,7 +8109,7 @@ PrefabInstance:
     - target: {fileID: 8534717591044828262, guid: 68a5579c8cb9d2c42bad59e9fb7c7b67,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 17.633
+      value: 18.727
       objectReference: {fileID: 0}
     - target: {fileID: 8534717591044828262, guid: 68a5579c8cb9d2c42bad59e9fb7c7b67,
         type: 3}
