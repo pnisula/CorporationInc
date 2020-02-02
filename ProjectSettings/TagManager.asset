@@ -9,6 +9,7 @@ TagManager:
   - Pickable
   - InteractionPanel
   - Dancers
+  - Crowd
   layers:
   - Default
   - TransparentFX
