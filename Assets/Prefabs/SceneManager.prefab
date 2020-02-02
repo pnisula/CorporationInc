@@ -43,3 +43,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2123e94e175e98d4bb212d894f7fd192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  marketingGoalDone: 0
+  legalGoalDone: 0
+  accountingGoalDone: 0
+  GameWon: {fileID: 0}
+  Player: {fileID: 0}
+  DJCamera: {fileID: 0}
+  Teller: {fileID: 0}
+  timePlayed: 0
+  maxTimeForPlaying: 10
+  VIPGuyIsHappy: 0

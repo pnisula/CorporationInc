@@ -29,6 +29,7 @@ public class SceneManager : MonoBehaviour
     public GameObject Teller;
     public float timePlayed;
     public float maxTimeForPlaying = 10f;
+    public bool VIPGuyIsHappy = false;
 
     public void SetMarketingGoalDone()
     {
@@ -80,6 +81,7 @@ public class SceneManager : MonoBehaviour
         }
         GameObject comedian = GameObject.FindGameObjectWithTag("Comedian");
         comedian.GetComponentInChildren<Animator>().SetBool("BookLost", true);
+        GameObject.Find("Stage").GetComponent<JokeGenerator>().NotSoFunnyAnymore = true;
     }
     void Update()
     {
@@ -89,6 +91,7 @@ public class SceneManager : MonoBehaviour
             if(timePlayed>maxTimeForPlaying)
             {
                 StopVinyl();
+                VIPGuyIsHappy = true;
             }
         }
     }

@@ -29,6 +29,11 @@ public class Raycaster : MonoBehaviour
                 pickupText.SetActive(true);
                 interactText.SetActive(false);
             }
+            if (hitForInteractPopup.collider.CompareTag("VIP"))
+            {
+                pickupText.SetActive(true);
+                interactText.SetActive(false);
+            }
         }
         else
         {
@@ -60,6 +65,11 @@ public class Raycaster : MonoBehaviour
                         hit.transform.gameObject.GetComponent<PickableObject>().PickUp();
                         holdingItem = hit.transform;
                     }
+                }
+                else if (hit.collider.CompareTag("VIP"))
+                {
+                    if (hit.transform.gameObject.GetComponent<VIPCustomScript>() != null)
+                        hit.transform.gameObject.GetComponent<VIPCustomScript>().Interact(holdingItem);
                 }
             }
             else
