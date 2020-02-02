@@ -30,38 +30,39 @@ public class SceneManager : MonoBehaviour
     public float timePlayed;
     public float maxTimeForPlaying = 10f;
     public bool VIPGuyIsHappy = false;
+    public bool GameWonCondition = false;
+    public GameObject recordPlayer;
 
     public void SetMarketingGoalDone()
     {
         marketingGoalDone = true;
-        FindObjectsOfType<ObjectiveUIManager>()[0].UpdateToggles();
-        CheckWinningCondition();
+        FindObjectsOfType<ObjectiveUIManager>()[0].UpdateToggles();        
     }
     public void SetLegalGoalDone()
     {
         legalGoalDone = true;
-        FindObjectsOfType<ObjectiveUIManager>()[0].UpdateToggles();
-        CheckWinningCondition();
+        FindObjectsOfType<ObjectiveUIManager>()[0].UpdateToggles();        
     }
     public void SetAccountingGoalDone()
     {
         accountingGoalDone = true;
-        FindObjectsOfType<ObjectiveUIManager>()[0].UpdateToggles();
-        CheckWinningCondition();
+        FindObjectsOfType<ObjectiveUIManager>()[0].UpdateToggles();        
     }         
 
-    public void CheckWinningCondition()
+    public bool CheckWinningCondition()
     {
         if(accountingGoalDone && marketingGoalDone && legalGoalDone)
         {
-            GameWon.SetActive(true);
+            return true;
         }
+        return false;
     }
 
     public void PlayVinyl()
     {
         Debug.Log("Play Vinyl");
 
+        recordPlayer.GetComponent<AudioSource>().Play();
         Player.SetActive(false);
         DJCamera.SetActive(true);
         Teller.SetActive(true);

@@ -32,7 +32,7 @@ MonoBehaviour:
     responseText: OK
     itemNeededToProgress: 
     questFinishedResponse: 
-  responseAfterObjectiveCompleted: 2
+  responseAfterObjectiveCompleted: 3
   canTalk: 1
   spawnObject: {fileID: 0}
   dialogText: I need to sober a little.
