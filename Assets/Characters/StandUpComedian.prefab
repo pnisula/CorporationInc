@@ -103,6 +103,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SK_Character_Male01
       objectReference: {fileID: 0}
+    - target: {fileID: 2030600310425927737, guid: 92bb9ea7dd82cd1429c3a9a8faf80780,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9f9153fd961488747bd232cb623495c8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92bb9ea7dd82cd1429c3a9a8faf80780, type: 3}
 --- !u!4 &7153666000192157686 stripped
