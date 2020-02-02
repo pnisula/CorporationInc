@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: bf1bf92a3ce592e40b898be6c21cc2fa, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.24414569, g: 0.30623963, b: 0.362625, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -392,6 +392,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DrunkDJ
       objectReference: {fileID: 0}
+    - target: {fileID: 2836677468242760848, guid: ab19a6a742edc0a48ab96152bf812bea,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     - target: {fileID: 2836677468242760851, guid: ab19a6a742edc0a48ab96152bf812bea,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -529,6 +534,32 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 543330306578046799}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &219685111 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1245203871899920, guid: 92e8106ffd152df408b363dad37d767f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1731074638}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &219685114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219685111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88b2a551a066e164c96471da7f6cc46e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextPhases: []
+  responseAfterObjectiveCompleted: 0
+  canTalk: 1
+  spawnObject: {fileID: 0}
+  dialogText: No time to sleep
+  responseText: I wish I had
+  itemNeededToProgress: 
+  questFinishedResponse: 
 --- !u!4 &238841612 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4907159172146739857, guid: 2f6330b8434da9741a5b736632e3cb54,
@@ -552,6 +583,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TalkingAmbience (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248893732195114609, guid: b62b0e19c7dba5a4880c72945d6fdd8b,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248893732195114609, guid: b62b0e19c7dba5a4880c72945d6fdd8b,
+        type: 3}
+      propertyPath: Loop
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1248893732195114614, guid: b62b0e19c7dba5a4880c72945d6fdd8b,
         type: 3}
@@ -623,6 +664,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1075724964315969856, guid: e702901592e30b44885843c1857f30d3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2ab03573558d844429648f00758bbb5d, type: 2}
+    - target: {fileID: 2080916006797398363, guid: e702901592e30b44885843c1857f30d3,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080916006797398363, guid: e702901592e30b44885843c1857f30d3,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3958564545530376524, guid: e702901592e30b44885843c1857f30d3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1201,6 +1257,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2080916006797398363, guid: e702901592e30b44885843c1857f30d3,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080916006797398363, guid: e702901592e30b44885843c1857f30d3,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3958564545530376524, guid: e702901592e30b44885843c1857f30d3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2047,6 +2113,45 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61201df732988f7409ae959dfbf34cd7, type: 3}
+--- !u!1 &870467211 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4431756715229711598, guid: 068cfa263327b36488bae78ccac57d78,
+    type: 3}
+  m_PrefabInstance: {fileID: 1163336709}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &870467213
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870467211}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7504242, y: 1.7936609, z: 1.1141013}
+  m_Center: {x: -0.056874603, y: 0.82195413, z: 0.30815214}
+--- !u!114 &870467214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870467211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88b2a551a066e164c96471da7f6cc46e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextPhases: []
+  responseAfterObjectiveCompleted: 0
+  canTalk: 1
+  spawnObject: {fileID: 0}
+  dialogText: Can't you see we're busy here! Creep! We'll tell about this to HR
+  responseText: Oops
+  itemNeededToProgress: 
+  questFinishedResponse: 
 --- !u!4 &931364701 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4907159171990672280, guid: 2f6330b8434da9741a5b736632e3cb54,
@@ -2309,6 +2414,45 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e56c3f56a324af64dbc18641e297a2e3, type: 3}
+--- !u!1 &1035732919 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2836677468242760848, guid: ab19a6a742edc0a48ab96152bf812bea,
+    type: 3}
+  m_PrefabInstance: {fileID: 178389063}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1035732921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035732919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88b2a551a066e164c96471da7f6cc46e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextPhases: []
+  responseAfterObjectiveCompleted: 0
+  canTalk: 1
+  spawnObject: {fileID: 0}
+  dialogText: '[vomiting in his mouth]'
+  responseText: I'll just leave
+  itemNeededToProgress: 
+  questFinishedResponse: 
+--- !u!65 &1035732922
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035732919}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.59331816, y: 1.8551674, z: 0.62163323}
+  m_Center: {x: 0.060191333, y: 0.919137, z: 0.028730033}
 --- !u!95 &1044173209 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 824308156, guid: 68a5579c8cb9d2c42bad59e9fb7c7b67,
@@ -2433,6 +2577,98 @@ Transform:
   m_Children: []
   m_Father: {fileID: 931364701}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1124196052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1124196054}
+  - component: {fileID: 1124196053}
+  m_Layer: 0
+  m_Name: Point Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1124196053
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124196052}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+--- !u!4 &1124196054
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124196052}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.164, y: 3.507, z: 17.855}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 51
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1130965277
 PrefabInstance:
@@ -2582,6 +2818,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb4265d4fa58f6547b011d419a000e85, type: 3}
+--- !u!1 &1155444728 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4055995486913981301, guid: 1d600250c5b2f7240ae9c51296b6a8b2,
+    type: 3}
+  m_PrefabInstance: {fileID: 4055995486674083991}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1163336709
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2593,6 +2835,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ManKissingWoman
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431756715229711598, guid: 068cfa263327b36488bae78ccac57d78,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     - target: {fileID: 4431756715229711599, guid: 068cfa263327b36488bae78ccac57d78,
         type: 3}
@@ -2738,6 +2985,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2080916006797398363, guid: e702901592e30b44885843c1857f30d3,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080916006797398363, guid: e702901592e30b44885843c1857f30d3,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3958564545530376524, guid: e702901592e30b44885843c1857f30d3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3466,6 +3723,45 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 543330306578046799}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1545643283 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8446364308929844301, guid: fbec0a3cb4e0b2a449f8574faf210859,
+    type: 3}
+  m_PrefabInstance: {fileID: 5984116272514553423}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1545643285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545643283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88b2a551a066e164c96471da7f6cc46e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextPhases: []
+  responseAfterObjectiveCompleted: 0
+  canTalk: 1
+  spawnObject: {fileID: 0}
+  dialogText: Get off my stage!
+  responseText: OK
+  itemNeededToProgress: 
+  questFinishedResponse: 
+--- !u!65 &1545643286
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545643283}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.48430586, z: 1}
+  m_Center: {x: 0, y: 1.5484254, z: 0}
 --- !u!1001 &1550226913
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4340,6 +4636,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chaise_L2_t1_F_2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1245203871899920, guid: 92e8106ffd152df408b363dad37d767f, type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     - target: {fileID: 4828736352289632, guid: 92e8106ffd152df408b363dad37d767f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.709
@@ -4856,6 +5156,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2080916006797398363, guid: e702901592e30b44885843c1857f30d3,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080916006797398363, guid: e702901592e30b44885843c1857f30d3,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4745789714173816293, guid: e702901592e30b44885843c1857f30d3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2ab03573558d844429648f00758bbb5d, type: 2}
     - target: {fileID: 8959059938999132471, guid: e702901592e30b44885843c1857f30d3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5294,6 +5609,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: TalkingAmbience (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1248893732195114609, guid: b62b0e19c7dba5a4880c72945d6fdd8b,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248893732195114609, guid: b62b0e19c7dba5a4880c72945d6fdd8b,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1248893732195114614, guid: b62b0e19c7dba5a4880c72945d6fdd8b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5611,22 +5936,22 @@ PrefabInstance:
     - target: {fileID: 543330305186929117, guid: e07bc37a9ca1ed6439a5222db52280c4,
         type: 3}
       propertyPath: m_fontColor.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 543330305186929117, guid: e07bc37a9ca1ed6439a5222db52280c4,
         type: 3}
       propertyPath: m_fontColor.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 543330305186929117, guid: e07bc37a9ca1ed6439a5222db52280c4,
         type: 3}
       propertyPath: m_fontColor.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 543330305186929117, guid: e07bc37a9ca1ed6439a5222db52280c4,
         type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4278190080
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 543330305186929117, guid: e07bc37a9ca1ed6439a5222db52280c4,
         type: 3}
@@ -5641,7 +5966,7 @@ PrefabInstance:
     - target: {fileID: 543330305186929117, guid: e07bc37a9ca1ed6439a5222db52280c4,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 543330305186929117, guid: e07bc37a9ca1ed6439a5222db52280c4,
         type: 3}
@@ -5694,6 +6019,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_MinSize
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 543330306258504581, guid: e07bc37a9ca1ed6439a5222db52280c4,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 543330306258504581, guid: e07bc37a9ca1ed6439a5222db52280c4,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 543330306258504581, guid: e07bc37a9ca1ed6439a5222db52280c4,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 543330306422101774, guid: e07bc37a9ca1ed6439a5222db52280c4,
         type: 3}
@@ -5893,6 +6233,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TalkingAmbience
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248893732195114609, guid: b62b0e19c7dba5a4880c72945d6fdd8b,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1248893732195114609, guid: b62b0e19c7dba5a4880c72945d6fdd8b,
+        type: 3}
+      propertyPath: Loop
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1248893732195114614, guid: b62b0e19c7dba5a4880c72945d6fdd8b,
         type: 3}
@@ -6098,7 +6448,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1452230566, guid: a82fd564ef97ced4b945f9ab276d166a, type: 3}
       propertyPath: dialogText
-      value: What, a signature. I'll have to sober up first
+      value: What, a signature. I'll have to sober up first. I'd appreciate a glass
+        of water
       objectReference: {fileID: 0}
     - target: {fileID: 1452230566, guid: a82fd564ef97ced4b945f9ab276d166a, type: 3}
       propertyPath: questFinishedResponse
@@ -6193,6 +6544,11 @@ PrefabInstance:
       propertyPath: doorRight
       value: 
       objectReference: {fileID: 1814190916}
+    - target: {fileID: 2889279274574589407, guid: bd8f5f4cc9798524ba858983840b4668,
+        type: 3}
+      propertyPath: maxNumberOfFloors
+      value: 134
+      objectReference: {fileID: 0}
     - target: {fileID: 2889279275212158742, guid: bd8f5f4cc9798524ba858983840b4668,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6622,6 +6978,11 @@ PrefabInstance:
       propertyPath: Teller
       value: 
       objectReference: {fileID: 8121701047782575417}
+    - target: {fileID: 5801593499721352043, guid: 5a72c29f71cf5cc4f8efc2fed3705815,
+        type: 3}
+      propertyPath: recordPlayer
+      value: 
+      objectReference: {fileID: 1155444728}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a72c29f71cf5cc4f8efc2fed3705815, type: 3}
 --- !u!1001 &4581389822797008645
@@ -6682,7 +7043,7 @@ PrefabInstance:
     - target: {fileID: 3484639704607517272, guid: b21772c53e10eb949b6bef5edc1fcd28,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.09
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 3484639704607517272, guid: b21772c53e10eb949b6bef5edc1fcd28,
         type: 3}
@@ -6817,6 +7178,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2129121666, guid: 4436d3308434f474590d6af0a083697a, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2129121666, guid: 4436d3308434f474590d6af0a083697a, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2129121666, guid: 4436d3308434f474590d6af0a083697a, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2129121666, guid: 4436d3308434f474590d6af0a083697a, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5116502497011861718, guid: 4436d3308434f474590d6af0a083697a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6886,6 +7263,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2080916006797398363, guid: e702901592e30b44885843c1857f30d3,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2080916006797398363, guid: e702901592e30b44885843c1857f30d3,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3958564545530376524, guid: e702901592e30b44885843c1857f30d3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -7215,6 +7602,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StandUpComedian (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8446364308929844301, guid: fbec0a3cb4e0b2a449f8574faf210859,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
       objectReference: {fileID: 0}
     - target: {fileID: 8968013894682305639, guid: fbec0a3cb4e0b2a449f8574faf210859,
         type: 3}
