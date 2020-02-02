@@ -5,6 +5,9 @@ using TMPro;
 
 public class JokeGenerator : MonoBehaviour
 {
+    public string[] jokesArray;
+    public string[] punchlinesArray;
+
     public JokesScriptableObject jokes;
     public TextMeshProUGUI jokesText;
     public GameObject jokeCanvas;
@@ -37,7 +40,7 @@ public class JokeGenerator : MonoBehaviour
     {
         TellJoke();
         tellJoke = false;        
-        jokesText.text = jokes.joke[jokeIndex];
+        jokesText.text = jokesArray[jokeIndex];
         jokeCanvas.SetActive(true);
         yield return new WaitForSeconds(4);
         
@@ -54,13 +57,13 @@ public class JokeGenerator : MonoBehaviour
         if (NotSoFunnyAnymore)
         {
             Debug.Log("Random punchline");
-            jokesText.text = jokes.punchLines[RandomNumber()];
+            jokesText.text = punchlinesArray[RandomNumber()];
             funnyjoke = false;
         }
         else
         {
             Debug.Log("Correct punchline");
-            jokesText.text = jokes.punchLines[jokeIndex];
+            jokesText.text = punchlinesArray[jokeIndex];
         }
         jokeCanvas.SetActive(true);
                 
@@ -80,7 +83,7 @@ public class JokeGenerator : MonoBehaviour
         }
         yield return new WaitForSeconds(6);
 
-        if (jokeIndex < jokes.joke.Length - 1)
+        if (jokeIndex < punchlinesArray.Length - 1)
         {
             jokeIndex++;
         }
@@ -92,7 +95,7 @@ public class JokeGenerator : MonoBehaviour
     }
     public int RandomNumber()
     {
-        return Random.Range(0, jokes.joke.Length - 1);        
+        return Random.Range(0, punchlinesArray.Length - 1);        
     }
     public void TellJoke()
     {

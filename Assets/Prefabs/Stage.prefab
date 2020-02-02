@@ -247,8 +247,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -394,7 +394,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0e0c861d8d89b5d48b9dcae02a615490, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -440,6 +440,66 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 082de869e8dd09647928ee5b00c8fcbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jokesArray:
+  - If you see a robbery at an Apple Store, what does that make you?
+  - "I told my son I was named after Thomas Jefferson\u2026 He said, \u201CBut dad,
+    your name is Brian.\u201D"
+  - Why did the invisible man turn down the job offer?
+  - What did the pirate say on his 80th birthday?
+  - What's the best part about living in Switzerland?
+  - Why couldn't the bike standup by itself?
+  - I used to have a job at a calendar factory
+  - A termite walks into a bar and asks
+  - 'SON: *hands my Dad his 50th birthday card*'
+  - What did the buffalo say to his son when he dropped him off at school?
+  - I just watched a documentary about beavers.
+  - Why wasn't the woman happy with the velcro she bought?
+  - What do you call a factory that sells passable products?
+  - What do you get when you cross a snowman with a vampire?
+  - How do you tell the difference between a frog and a horny toad?
+  - 'What do prisoners use to call each other? '
+  - My wife is really mad at the fact that I have no sense of direction.
+  - 'Today, my son asked "Can I have a book mark?" and I burst into tears. '
+  - How do you make holy water?
+  - I bought some shoes from a drug dealer.
+  - Did you know the first French fries weren't actually cooked in France?
+  - 'I''m reading a book about anti-gravity. '
+  - What do you call someone with no body and no nose?
+  - What is the least spoken language in the world?
+  - My daughter screeched, "Daaaaaad, you haven't listened to one word I've said,
+    have you!?"
+  - 'When a dad drives past a graveyard: Did you know that''s a popular cemetery?'
+  - Why can't you hear a pterodactyl go to the bathroom?
+  - What does a zombie vegetarian eat?
+  punchlinesArray:
+  - an iWitness
+  - "I said, \u201CI know, but I was named AFTER Thomas Jefferson.\u201D"
+  - He couldn't see himself doing it.
+  - AYE MATEY
+  - I don't know, but the flag is a big plus.
+  - It was two tired.
+  - but I got the sack because I took a couple of days off.
+  - '"Is the bar tender here?"'
+  - 'DAD: You know, one would have been enough.'
+  - Bison
+  - It was the best dam show I ever saw!
+  - It was a total ripoff.
+  - A satisfactory.
+  - Frostbite.
+  - "A frog says, \"Ribbit, ribbit\" and a horny toad says, \"Rub it, rub it.\u201D"
+  - Cell phones.
+  - So I packed up my stuff and right.
+  - 11 years old and he still doesn't know my name is Brian.
+  - You boil the hell out of it.
+  - I don't know what he laced them with, but I was tripping all day!
+  - They were cooked in Greece.
+  - It's impossible to put down!
+  - Nobody knows.
+  - ' Sign language'
+  - What a strange way to start a conversation with me...
+  - Yep, people are just dying to get in there!
+  - Because the pee is silent.
+  - "\u201CGRRRAAAAAIIIINNNNS!\u201D"
   jokes: {fileID: 11400000, guid: 088b75bc50469ed4b80951d2e9423298, type: 2}
   jokesText: {fileID: 2129121666}
   jokeCanvas: {fileID: 1082678278}
