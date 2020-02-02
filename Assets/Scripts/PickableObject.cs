@@ -8,6 +8,7 @@ public class PickableObject : MonoBehaviour
     Transform playerCameraTransform;
     Transform sceneTransform;
     bool pickedUp = false;
+    public bool book;
 
     private Vector3 initialPos;
 
@@ -37,6 +38,10 @@ public class PickableObject : MonoBehaviour
             this.transform.parent = playerCameraTransform;
             this.GetComponent<Collider>().enabled = false;
             GetComponent<Rigidbody>().isKinematic = true;
+            if(book)
+            {
+                SceneManager.Instance.BookStolen();
+            }
         }
     }
 

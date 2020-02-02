@@ -71,6 +71,16 @@ public class SceneManager : MonoBehaviour
             dancer.GetComponentInChildren<Dancers>().GoDancing();
         }
     }
+    public void BookStolen()
+    {
+        GameObject[] crowd = GameObject.FindGameObjectsWithTag("Crowd");
+        foreach (GameObject person in crowd)
+        {            
+            person.GetComponentInChildren<Animator>().SetBool("BookLost",true);            
+        }
+        GameObject comedian = GameObject.FindGameObjectWithTag("Comedian");
+        comedian.GetComponentInChildren<Animator>().SetBool("BookLost", true);
+    }
     void Update()
     {
         if(playRecord)
