@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5924336180392006747}
   - component: {fileID: 5924336180392006746}
   m_Layer: 0
-  m_Name: GlassOfWater
+  m_Name: EmptyGlassOfWater
   m_TagString: Pickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5924336180392006744}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.02, y: 1.4611487, z: -3.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -45,8 +45,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.25476456, y: 0.36161888, z: 0.30819178}
-  m_Center: {x: 0.008498192, y: 0.09487468, z: -0.027111411}
+  m_Size: {x: 0.1152401, y: 0.19987166, z: 0.12606883}
+  m_Center: {x: -0.005063057, y: 0.10236168, z: -0.0016790628}
 --- !u!114 &5924336180392006747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,6 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f9f0d6af0904444e9e29ae06a3a3e82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  book: 0
 --- !u!54 &5924336180392006746
 Rigidbody:
   m_ObjectHideFlags: 0

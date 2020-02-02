@@ -90,7 +90,7 @@ public class InteractableObject : MonoBehaviour
             else
             {
                 if (canTalk)
-                    InteractionPanelScript.Instance.ShowInteraction("I don't need your " + interactedWithItem.name + ". Leave me alone. I need " + itemNeededToProgress, "Ok.");
+                    InteractionPanelScript.Instance.ShowInteraction("I don't need this. Leave me alone.", "Ok.");
             }
         }
         else
