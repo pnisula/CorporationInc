@@ -2710,7 +2710,17 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8534717591039165862, guid: 68a5579c8cb9d2c42bad59e9fb7c7b67,
         type: 3}
+      propertyPath: m_FootstepSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8534717591039165862, guid: 68a5579c8cb9d2c42bad59e9fb7c7b67,
+        type: 3}
       propertyPath: m_FootstepSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: a8f6457bc89bf124d9abc4c05fdb5a62, type: 3}
+    - target: {fileID: 8534717591039165862, guid: 68a5579c8cb9d2c42bad59e9fb7c7b67,
+        type: 3}
+      propertyPath: m_FootstepSounds.Array.data[1]
       value: 
       objectReference: {fileID: 8300000, guid: a8f6457bc89bf124d9abc4c05fdb5a62, type: 3}
     - target: {fileID: 8534717591044828262, guid: 68a5579c8cb9d2c42bad59e9fb7c7b67,
