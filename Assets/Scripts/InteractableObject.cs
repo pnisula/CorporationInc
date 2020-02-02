@@ -50,7 +50,7 @@ public class InteractableObject : MonoBehaviour
                         // do nothing (obviously)
                         break;
                     case Responses.SpawnObject:
-                        Spawn(interactedWithItem.position);
+                        Spawn(transform.position);
                         break;
                     case Responses.GiveMarketingSignature:
                         SceneManager.Instance.SetMarketingGoalDone();
