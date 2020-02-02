@@ -13,11 +13,12 @@ public class JokeGenerator : MonoBehaviour
     bool tellPunchLine = false;
     int jokeIndex = 0;
     private AudioSource jokeSounds;
-    
+    private Animator jokeAnimator;
 
     void Start()
     {
         jokeSounds = GetComponent<AudioSource>();
+        jokeAnimator = GameObject.FindGameObjectWithTag("Comedian").GetComponent<Animator>();
     }
     // Update is called once per frame
     void Update()
@@ -30,7 +31,8 @@ public class JokeGenerator : MonoBehaviour
 
     IEnumerator NewJoke()
     {
-        tellJoke = false;
+        TellJoke();
+        tellJoke = false;        
         jokesText.text = jokes.joke[jokeIndex];
         jokeCanvas.SetActive(true);
         yield return new WaitForSeconds(3);
@@ -43,6 +45,7 @@ public class JokeGenerator : MonoBehaviour
     }
     IEnumerator NewPunchLine()
     {
+        TellPunchline();
         tellPunchLine = false;
         if (NotSoFunnyAnymore)
         {
@@ -60,7 +63,7 @@ public class JokeGenerator : MonoBehaviour
         
         Debug.Log("Tell Punch Line: "+jokeIndex);        
         jokeCanvas.SetActive(false);
-
+        ReadBook();
         jokeSounds.Play();        
 
         yield return new WaitForSeconds(1);
@@ -78,5 +81,23 @@ public class JokeGenerator : MonoBehaviour
     public int RandomNumber()
     {
         return Random.Range(0, jokes.joke.Length - 1);        
+    }
+    public void TellJoke()
+    {
+        jokeAnimator.SetBool("TellingPunchline", false);
+        jokeAnimator.SetBool("TellingJoke", true);
+        jokeAnimator.SetBool("ReadingBook", false);
+    }
+    public void TellPunchline()
+    {
+        jokeAnimator.SetBool("TellingPunchline", true);
+        jokeAnimator.SetBool("TellingJoke", false);
+        jokeAnimator.SetBool("ReadingBook", false);
+    }
+    public void ReadBook()
+    {
+        jokeAnimator.SetBool("TellingPunchline", false);
+        jokeAnimator.SetBool("TellingJoke", false);
+        jokeAnimator.SetBool("ReadingBook", true);
     }
 }
