@@ -9,9 +9,9 @@ public class FloorNumberChanger : MonoBehaviour
     public TextMeshProUGUI floorNumberText;
     public GameObject doorLeft;
     public GameObject doorRight;
-    public int maxNumberOfFloors = 5;
-    float time = 0.0f;
-    int floorNumber = 0;
+    public int maxNumberOfFloors = 134;
+    float time = 122.0f;
+    int floorNumber = 122;
     bool doorsOpen;
     // Update is called once per frame
     void Update()
@@ -19,7 +19,7 @@ public class FloorNumberChanger : MonoBehaviour
         if ((int)time < maxNumberOfFloors)
         { 
             time += Time.deltaTime;
-            Mathf.Clamp(time, 0.0f, 12.0f);
+            Mathf.Clamp(time, 122.0f, maxNumberOfFloors);
 
             floorNumber = (int)time;
             floorNumberText.text = floorNumber.ToString();

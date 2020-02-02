@@ -116,6 +116,7 @@ MonoBehaviour:
   floorNumberText: {fileID: 2889279274757222017}
   doorLeft: {fileID: 0}
   doorRight: {fileID: 0}
+  maxNumberOfFloors: 134
 --- !u!1 &2889279274757222019
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,8 +211,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
