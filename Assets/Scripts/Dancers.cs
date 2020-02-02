@@ -17,12 +17,13 @@ public class Dancers : MonoBehaviour
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         agent.destination = DancingLocation.position;        
         shouldMove = true;
-        danceAnimator.SetFloat("Speed", 1f);
+        danceAnimator.SetBool("Walking", true);
+        danceAnimator.SetBool("TimeToDance", false);
     }
     void Dance()
-    {
-        danceAnimator.SetFloat("Speed", 0f);
+    {        
         danceAnimator.SetBool("TimeToDance", true);
+        danceAnimator.SetBool("Walking", false);
     }
     // Update is called once per frame
     void Update()
@@ -30,15 +31,12 @@ public class Dancers : MonoBehaviour
         if (shouldMove && agent != null && !agent.pathPending)
         {            
             if (agent.remainingDistance <= agent.stoppingDistance)
-            {
+            {                                
                 if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
                 {
-                    if (agent.velocity.sqrMagnitude < 3f)
-                    {
-                        danceAnimator.SetFloat("Speed", agent.velocity.sqrMagnitude);
-                        shouldMove = false;
-                        Dance();
-                    }
+                    Debug.Log("STOP");
+                    shouldMove = false;                    
+                    Dance();                    
                 }
             }
         }
